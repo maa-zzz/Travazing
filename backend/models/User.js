@@ -7,11 +7,13 @@ const userSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
+
     email: {
       type: String,
       required: true,
       unique: true,
     },
+
     password: {
       type: String,
       required: true,
@@ -23,10 +25,17 @@ const userSchema = new mongoose.Schema(
 
     role: {
       type: String,
-      default: "user",
+      default: "User",
     },
   },
   { timestamps: true }
 );
 
-export default mongoose.model("User", userSchema);
+userSchema.statics.findAdmins = function () {
+  return this.find({ role: "Admin" });
+};
+
+const User = mongoose.model("User", userSchema);
+
+export default User;
+

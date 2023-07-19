@@ -1,36 +1,77 @@
-import {useState, useEffect} from "react";
+// import {useState, useEffect} from "react";
 
-const useFetch = (url) => {
-  const [data, setData] = useState([]);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
+// const useFetch = (url) => {
+//   const [data, setData] = useState([]);
+//   const [error, setError] = useState(null);
+//   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
+//   useEffect(() => {
+//     const fetchData = async () => {
+//       setLoading(true);
 
-      try {
-        const res = await fetch(url);
+//       try {
+//         const res = await fetch(url);
 
-        if (!res.ok) {
-          setError("Failed to fetch");
+//         if (!res.ok) {
+//           setError("Failed to fetch");
+//         }
+//         const result = await res.json();
+//         setData(result.data);
+//         setLoading(false);
+//       } catch (err) {
+//         setError(err.message);
+//         setLoading(false);
+//       }
+//     };
+//     fetchData();
+//   }, [url]);
+
+//   return {
+//     data,
+//     error,
+//     loading,
+//   };
+// };
+
+// export default useFetch;
+
+/* eslint-disable react-hooks/exhaustive-deps */
+import {useState,useEffect} from 'react'
+
+const useFetch = (url) =>{
+    const [data, setData] = useState([])
+    const [error,setError] = useState(null)
+    const [loading, setLoading] = useState(false)
+
+        const fetchData = async()=>{
+            setLoading(true)
+
+            try{
+                const res = await fetch(url)
+
+                if(!res.ok)
+                {
+                    setError('failed to fetch data')
+                    alert('failed to fetch data')
+                }
+                const result = await res.json()
+                setData(result.data)
+            }
+            catch(err){
+                setError(err.message)
+                setLoading(false)
         }
-        const result = await res.json();
-        setData(result.data);
-        setLoading(false);
-      } catch (err) {
-        setError(err.message);
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, [url]);
+    }
+    useEffect(()=>{
+        fetchData()
+    },[url]);
 
-  return {
-    data,
-    error,
-    loading,
-  };
-};
+    return {
+        data,
+        error,
+        loading,
+        fetchData
+    }
+}
 
-export default useFetch;
+export default useFetch

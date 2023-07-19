@@ -7,14 +7,14 @@ import heroImg02 from "../assets/images/hero-img02.jpg";
 import heroVideo from "../assets/images/hero-video.mp4";
 import worldImg from "../assets/images/world.png";
 import experienceImg from "../assets/images/experience.png";
-import Subtitle from "../shared/Subtitle";
+import Subtitle from "../shared/Subtitles";
 
 import SearchBar from "../shared/SearchBar";
 import ServiceList from "../services/ServiceList";
 import FeaturedTourList from "../components/Featured-tours/FeaturedTourList";
 import MasonryImageGallery from "../components/Image-gallery/MasonryImageGallery";
 import Testimonials from "../components/Testimonial/Testimonials";
-import Newsletter from "../shared/Newsletter";
+import NewsLetter from "../shared/NewsLetter";
 
 const Home = () => {
   return (
@@ -155,7 +155,7 @@ const Home = () => {
         </Container>
       </section>
       {/*=================== Testimonial Section End =================== */}
-      <Newsletter />
+      <NewsLetter />
     </>
   );
 };
