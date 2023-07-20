@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "../styles/profile.css";
-import { authContext } from "../context/authContext";
+import { authContext } from "../context/AuthContext";
 import userImg from "../assets/images/user.png";
 import useFetch from "../hooks/useFetch.js";
 import { BASE_URL } from "../utils/config";

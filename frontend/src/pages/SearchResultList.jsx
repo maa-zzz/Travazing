@@ -40,7 +40,6 @@ import { Col, Container, Row } from 'reactstrap'
 
 import { useLocation } from 'react-router-dom'
 import TourCard from '../shared/TourCard.jsx'
-// import NewsLetter from '../shared/NewsLetter.jsx'
 import Newsletter from '../shared/NewsLetter.jsx'
 import Footer from '../components/Footer/Footer'
 

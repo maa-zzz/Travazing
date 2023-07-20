@@ -116,7 +116,7 @@ const Header = () => {
                     </>
                 )}
                 {isAdmin && (<Button className="btn_reg ">
-                      <Link to="/admin">Admin panel</Link>
+                      <Link to="/admin">Admin Panel</Link>
                     </Button>)
                 }
               </div>

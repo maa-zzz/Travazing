@@ -1,0 +1,34 @@
+.create-tour-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.create-tour-card {
+  width: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-tour-card .form-group {
+  margin-bottom: 20px;
+}
+
+.create-tour-card label {
+  font-weight: bold;
+}
+
+.create-tour-card input[type="text"],
+.create-tour-card input[type="number"],
+.create-tour-card textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.create-tour-card .btn-primary {
+  width: 100%;
+}
